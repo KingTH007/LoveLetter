@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LOVE LETTER</title>
+        <link rel="icon" href="img/heart.png">
+        <style>
+            body {
+                font-family: 'Brush Script MT', cursive;
+                text-align: center;
+                padding: 2em;
+                background-color: #ffb6c1;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                min-height: 100vh;
+                padding: 2em;
+            }
+            .letter {
+                width: 550px;
+                margin: 1em auto;
+                background-color: white;
+                padding: 1em;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                transition: opacity 2s, max-height 2s;
+                max-height: 0;
+                overflow: hidden;
+            }
+            .heart {
+                display: inline-block;
+                font-size: 2em;
+                color: red;
+                cursor: pointer;
+                animation: heart-beat 2s infinite;
+            }
+            @keyframes heart-beat {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); }
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <span class="heart" onclick="showLetter()">❤</span>
+        </p>
+        <div class="letter">
+            <p>
+                My Dearest Baby,<br>
+                Happy 14th monthsary baby ko, Yeheyy 1 year and 2 month na us yeheyyy
+                I miss you so much mu babyy ko I love you po. super tagal na natin 
+                sorry po di em nakagawa ng letter nung feb 14 for you po huhuhu and
+                sorry din po kasi wala manlng em mabili na gift for you kahit monthsary natin
+                babawi din em soon okii. I love you so much muuuwwhaa i miss you so much
+                babyy sorry din po kasi madami em gagawin this few days huhuhu i miss you so much
+                kapah punta ko dyan gala us hanggang umaga to gabi okii puntahan natin lahat ng pwede
+                natin puntahan tas kapag nag 18th birthday ka po pupunta din em oki i love you so much
+                madami us pupuntahan at tas kakain din us sa mga streetfood, fastfood, and sa restaurant ko
+                syempre ako magluluto heheh gawan kita burger steak at carbonara RAWRR I love you so much
+                mycutecutebabyy your so beautiful po and sexy syempre I miss you so much 
+            </p>
+        </div>
+        <script>
+            function showLetter() {
+                let letter = document.querySelector('.letter');
+                letter.style.opacity = 1;
+                letter.style.maxHeight = letter.scrollHeight + 'px';
+                document.body.style.backgroundColor = '#ffc0cb';
+            }
+        </script>
+    </body>
+</html>
